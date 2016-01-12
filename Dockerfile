@@ -33,7 +33,7 @@ ADD config/elasticsearch.yml ~/elasticsearch/config/elasticsearch.yml
 WORKDIR /eshome/data
 
 # Define default command.
-CMD ["../elasticsearch/bin/elasticsearch"]
+CMD ["../elasticsearch/bin/elasticsearch", "--network.host", "_non_loopback_"]
 
 # Expose ports.
 #   - 9200: HTTP
